@@ -424,6 +424,11 @@ def number_formulas(doc):
         om = p._p.find(qn("m:oMathPara"))
         if om is None:
             continue
+        # 清除本脚本先前追加的编号；重复排版时保留公式，只重建一份编号。
+        for old_run in list(p.runs):
+            if (re.fullmatch(r"\t\(\d+\)", old_run.text)
+                    and old_run._r in om.itersiblings()):
+                p._p.remove(old_run._r)
         count += 1
         pPr = p._p.get_or_add_pPr()
         jc = pPr.find(qn("w:jc"))

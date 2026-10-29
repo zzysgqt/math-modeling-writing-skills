@@ -10,6 +10,8 @@ description: 数模（数学建模竞赛）论文定稿阶段从 Markdown 转 Wo
 
 ## 1. 总体流程
 
+运行前需具备 Pandoc 3.x、Python 和 `python-docx`；独立安装本技能后，可在技能目录运行 `python -m pip install -r requirements.txt`。所需字体见第 3 节，字体不随技能分发。
+
 1. 确认 md 遵循标题层级约定（`#`=论文标题、`##`=一级标题、`###`=二级标题、`####`=三级标题；列表"1./（1）"为正文文本）。
 2. `pandoc 论文.md -o 论文_raw.docx`（需自行安装 Pandoc 3.x 并加入 PATH；图片路径按执行目录解析）。
 3. `python scripts/apply_docx_layout.py 论文_raw.docx 论文.docx`（页面/样式/字体/表格/图片/公式编号）。

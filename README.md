@@ -32,6 +32,8 @@ npx skills add zzysgqt/math-modeling-writing-skills --skill md-to-docx-layout --
 
 以上为项目级安装示例；如需用户级安装，按客户端说明选择对应作用域。安装技能文件不会自动安装 Pandoc、Python 或字体。
 
+GitHub 提供保存、下载与版本管理，本仓库不提供网页端运行服务。将技能安装到支持它的客户端后，再在对话中调用 `$math-model-symbols` 或 `$md-to-docx-layout`。仓库更新后需更新本地安装副本；仅打开仓库网页不会自动安装或更新。
+
 ## 使用示例
 
 ### 整理符号说明
@@ -81,6 +83,7 @@ python skills/md-to-docx-layout/scripts/apply_docx_layout.py paper_raw.docx pape
 - 两个技能中的字体约定并非完全一致：符号说明表的局部约定应明确指定，全文后处理后仍须复查该表。
 - 公式编号、复杂表格、分页、字体替代及图片位置需要打开 Word 或导出 PDF 后目检；脚本运行成功不等于版面合格。
 - 文档中的历史实测经验不代表所有系统、Word 或 Pandoc 版本都已验证。
+- 模板中的章节、问题数量及编号是示例，例如“模型评价”小节编号需按实际章节顺序调整；不要将占位内容直接提交。
 
 ## 来源与贡献
 
