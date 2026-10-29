@@ -8,6 +8,7 @@ venv/
 output/
 outputs/
 *.docx
+!skills/md-to-docx-layout/assets/国赛模板.docx
 *.pdf
 ~$*
 .DS_Store

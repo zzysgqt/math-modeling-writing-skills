@@ -67,6 +67,9 @@ description: 数模（数学建模竞赛）论文定稿阶段从 Markdown 转 Wo
 
 ## 8. 资源
 
+- `assets/国赛模板.docx`：用户提供的章节骨架与 Word 样式参考，可复制后填写；不代表当届官方最新模板。AI 使用声明必须按实际使用情况修改。
+- 使用模板前核对当届赛事要求。Pandoc 的 `--reference-doc` 只借用样式，不复制模板正文或章节；完整骨架需复制模板后填写。后处理脚本会覆盖部分模板样式，规则冲突时以指定模板和赛事要求为准，调整脚本或跳过不适用步骤。
+
 - `references/spec.md`：完整排版规范文字版（可分享给队友）。
 - `references/workflow.md`：详细转换步骤 + 人工核对清单。
 - `scripts/apply_docx_layout.py`：后处理脚本（已用 pandoc 输出实测）。

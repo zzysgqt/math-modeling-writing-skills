@@ -51,6 +51,18 @@ npx skills add zzysgqt/math-modeling-writing-skills --skill md-to-docx-layout --
 
 ## 本地运行排版脚本
 
+配套 [国赛模板.docx](skills/md-to-docx-layout/assets/国赛模板.docx) 位于技能的 `assets/` 目录，可复制后填写。模板包含摘要、问题重述、模型假设、符号说明、问题建模求解、模型评价、AI 工具使用声明、参考文献和附录。它是用户提供的工作模板，不代表任何年份赛事的官方最新模板。AI 使用声明及支撑材料清单是示例，须按实际情况和当届规则修改，不得直接当作事实提交。
+
+模板发布副本仅清空文档属性中的作者和最后修改者，正文、样式及页面结构保持原样。
+
+如希望 Pandoc 借用模板中的同名 Word 样式，可使用：
+
+```bash
+pandoc paper.md --reference-doc=skills/md-to-docx-layout/assets/国赛模板.docx -o paper_raw.docx
+```
+
+`--reference-doc` 只借用样式和文档属性，不会把模板中的章节、表格或声明正文复制进输出。需要完整章节骨架时，应复制模板后直接填写。后处理脚本会重新设置页面和样式；若当届模板与团队默认规则不同，先调整脚本或跳过不适用的后处理。
+
 依赖：Python 3.10+、`python-docx`、Pandoc 3.x。目标字体为宋体、黑体、Times New Roman 和 Cambria Math；字体不随仓库分发。建议在隔离的 Python 环境中安装依赖。
 
 ```bash
