@@ -1,0 +1,4 @@
+interface:
+  display_name: "符号说明与公式解释写作规范"
+  short_description: "数模论文中符号说明与公式解释部分的写作、字体与校验规则"
+  default_prompt: "Use $math-model-symbols to write or revise the 符号说明与名词定义 section and formula variable explanations in a math-modeling paper."

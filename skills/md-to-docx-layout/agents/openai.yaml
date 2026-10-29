@@ -1,0 +1,4 @@
+interface:
+  display_name: "MD转DOCX排版（数模论文）"
+  short_description: "数模论文从Markdown转Word并按规范排版的流程与字体要求"
+  default_prompt: "Use $md-to-docx-layout to convert a Markdown draft of a math-modeling paper into a formatted .docx."
